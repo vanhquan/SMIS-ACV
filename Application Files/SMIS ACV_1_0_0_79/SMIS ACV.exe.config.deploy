@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+  </configSections>
+  <appSettings>
+    <!-- 1: Real Mode; 0: Training Mode ; 2: Test Mode-->
+    <add key="Mode" value="1"/>
+    <!--<add key="ReportPath" value="F:\Projects 2nd\_SAGS\SOMIS\SMISReport\"/>-->
+    <add key="BaseStation" value="SGN"/>
+    <add key="LoggOut" value="30"/>
+    <add key="LockBaseStation" value="0"/>
+    <add key="DisAutoLoggOut" value="0"/>
+    <add key="LastLoginMode" value="0"/>
+   
+    <add key="ClientSettingsProvider.ServiceUri" value=""/>
+ 
+  </appSettings>
+  <connectionStrings>
+    <add name="RealMode" connectionString="+7cZQSQYPlCxKY0xWyQR+JswEi0DEQdMWXKHjy4UVn/6IVIg2KM64ivpBRtPmhkaFeKvtH4x8rKLFuK7LqeV6naXL6Yy4JG/5CF3YPYwAB8="/>
+    <add name="Log" connectionString="+7cZQSQYPlCxKY0xWyQR+JswEi0DEQdMWXKHjy4UVn/Urp10Zh/bRJzRr9pQCyV2L546us3l+ztWou8G7daMslFNH6Byk4WX3XM7Sn0VrKY="/>
+    <add name="Doc" connectionString="bOKBdmrcAX9BXOf6dI/tuRQ0kbsnQ3G9/DAnrrwyVe8YqZJHzmJX7qdhIEwJCdtG8kYtgC++abiaT1TmNu1a14Ybt3t8Jk+BpQ2ax1VydIU="/>
+  </connectionStrings>
+  <startup useLegacyV2RuntimeActivationPolicy="true">
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+  </startup>
+
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri=""/>
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400"/>
+      </providers>
+    </roleManager>
+  </system.web>
+
+  
+</configuration>
